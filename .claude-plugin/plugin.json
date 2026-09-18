@@ -1,0 +1,7 @@
+{
+  "name": "prove-skills",
+  "description": "Ten practices written down so an agent applies them without you in the room: characterization before you change anything, examples before code, an outer test the agent may not edit, evidence instead of a report of success.",
+  "version": "1.0.0",
+  "author": { "name": "Nate Jackson" },
+  "homepage": "https://prove.natejackson.dev"
+}

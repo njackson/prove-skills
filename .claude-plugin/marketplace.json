@@ -1,0 +1,19 @@
+{
+  "name": "prove-skills",
+  "owner": { "name": "Nate Jackson" },
+  "metadata": {
+    "description": "The skills from Ship What You Can Prove, a guide to the XP/BDD/CD practices and what they become when a machine does the typing."
+  },
+  "plugins": [
+    {
+      "name": "prove-skills",
+      "description": "Ten practices written down so an agent applies them without you in the room.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": { "name": "Nate Jackson" },
+      "homepage": "https://prove.natejackson.dev",
+      "category": "development",
+      "keywords": ["tdd", "bdd", "testing", "verification", "refactoring", "continuous-delivery"]
+    }
+  ]
+}

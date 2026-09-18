@@ -8,19 +8,23 @@ Plain markdown with a small header. Nothing here needs a dashboard, a server, or
 
 ## Install
 
+In Claude Code, add the marketplace once and install:
+
+```
+/plugin marketplace add njackson/prove-skills
+/plugin install prove-skills@prove-skills
+```
+
+Or take the files directly, which works with any tool:
+
 ```sh
 npx degit njackson/prove-skills .claude          # this project only
 npx degit njackson/prove-skills ~/.claude        # every project on this machine
-```
-
-Or clone it and copy what you want:
-
-```sh
 git clone https://github.com/njackson/prove-skills
 ```
 
-The layout matches Claude Code's, so the repo root drops straight into `.claude/`. Other tools have
-equivalents; the files themselves are just markdown.
+The repo root doubles as the plugin and as a `.claude/` directory, so either route puts the same
+files in the same places. They are plain markdown; other tools have their own equivalents.
 
 **Then do the thing the files cannot do for you.** A rule here reads as a rule because somebody
 watched it get broken. You can copy the paragraph. You cannot copy the afternoon it cost, and a rule
