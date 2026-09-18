@@ -1,19 +1,114 @@
 {
   "name": "prove-skills",
-  "owner": { "name": "Nate Jackson" },
+  "owner": {
+    "name": "Nate Jackson"
+  },
   "metadata": {
-    "description": "The skills from Ship What You Can Prove, a guide to the XP/BDD/CD practices and what they become when a machine does the typing."
+    "description": "The skills from Ship What You Can Prove, grouped by the job you are doing: specifying, testing, running agents in parallel, measuring them, reviewing, and the course itself."
   },
   "plugins": [
     {
-      "name": "prove-skills",
-      "description": "Ten practices written down so an agent applies them without you in the room.",
+      "name": "specify-first",
+      "description": "Turn a vague ask into concrete examples and executable specs before any code exists: map the journey, settle every open question, name the domain language, and characterize what is already there before changing it.",
       "version": "1.0.0",
-      "source": "./",
-      "author": { "name": "Nate Jackson" },
+      "author": {
+        "name": "Nate Jackson"
+      },
       "homepage": "https://prove.natejackson.dev",
+      "source": "./plugins/specify-first",
       "category": "development",
-      "keywords": ["tdd", "bdd", "testing", "verification", "refactoring", "continuous-delivery"]
+      "keywords": [
+        "bdd",
+        "requirements",
+        "example-mapping",
+        "refactoring",
+        "legacy-code"
+      ]
+    },
+    {
+      "name": "test-first",
+      "description": "Build against an acceptance test the agent may not edit, run the inner loop without pausing, and finish with evidence instead of a report of success, including a required section for what was not verified.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nate Jackson"
+      },
+      "homepage": "https://prove.natejackson.dev",
+      "source": "./plugins/test-first",
+      "category": "development",
+      "keywords": [
+        "tdd",
+        "testing",
+        "verification",
+        "acceptance-tests",
+        "mutation-testing"
+      ]
+    },
+    {
+      "name": "parallel-agents",
+      "description": "Run several agents at once without them corrupting each other: one git worktree per stream, explicit file allow-lists, branch CI as the merge gate, and a queue that stops rather than thrashing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nate Jackson"
+      },
+      "homepage": "https://prove.natejackson.dev",
+      "source": "./plugins/parallel-agents",
+      "category": "development",
+      "keywords": [
+        "git-worktree",
+        "parallel",
+        "orchestration",
+        "ci"
+      ]
+    },
+    {
+      "name": "improve-agent",
+      "description": "Make an agent measurably better by changing only the text it reads. Measures the noise floor before it claims anything, changes one component per round, and keeps a change only when it clears the spread.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nate Jackson"
+      },
+      "homepage": "https://prove.natejackson.dev",
+      "source": "./plugins/improve-agent",
+      "category": "development",
+      "keywords": [
+        "evals",
+        "measurement",
+        "prompt-engineering",
+        "statistics"
+      ]
+    },
+    {
+      "name": "panel-review",
+      "description": "A simulated panel of named practitioners reviews a design, a diff or a positioning draft, each from their own published positions, then the findings are verified against the code before any of them become tickets.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nate Jackson"
+      },
+      "homepage": "https://prove.natejackson.dev",
+      "source": "./plugins/panel-review",
+      "category": "development",
+      "keywords": [
+        "code-review",
+        "design-review",
+        "architecture"
+      ]
+    },
+    {
+      "name": "ship-what-you-can-prove",
+      "description": "Run the guide as a self-paced course inside this session: one chapter's exercise against your own repository, checked for the evidence it was supposed to leave, graded by an agent that cannot edit anything.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Nate Jackson"
+      },
+      "homepage": "https://prove.natejackson.dev",
+      "source": "./plugins/ship-what-you-can-prove",
+      "category": "development",
+      "keywords": [
+        "course",
+        "tutorial",
+        "xp",
+        "learning"
+      ]
     }
   ]
 }

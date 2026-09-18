@@ -1,30 +1,37 @@
 # The Skills
 
-Ten practices written down so an agent applies them without you in the room. They are the companion
-files to [**Ship What You Can Prove**](https://prove.natejackson.dev), a self-paced guide to the
-XP/BDD/CD practices and what they become when a machine does the typing.
-
-Plain markdown with a small header. Nothing here needs a dashboard, a server, or a framework.
+Practices written down so an agent applies them without you in the room. Companion plugins to
+[**Ship What You Can Prove**](https://prove.natejackson.dev), a guide to the XP/BDD/CD practices and
+what they become when a machine does the typing.
 
 ## Install
 
-In Claude Code, add the marketplace once and install:
-
 ```
 /plugin marketplace add njackson/prove-skills
-/plugin install prove-skills@prove-skills
 ```
 
-Or take the files directly, which works with any tool:
+Then install whichever you want:
 
-```sh
-npx degit njackson/prove-skills .claude          # this project only
-npx degit njackson/prove-skills ~/.claude        # every project on this machine
-git clone https://github.com/njackson/prove-skills
+```
+/plugin install specify-first@prove-skills
+/plugin install test-first@prove-skills
+/plugin install parallel-agents@prove-skills
+/plugin install improve-agent@prove-skills
+/plugin install panel-review@prove-skills
+/plugin install ship-what-you-can-prove@prove-skills
 ```
 
-The repo root doubles as the plugin and as a `.claude/` directory, so either route puts the same
-files in the same places. They are plain markdown; other tools have their own equivalents.
+| Plugin | What it is for | Chapters |
+|---|---|---|
+| [`specify-first`](./plugins/specify-first) | Turn a vague ask into concrete examples and executable specs before any code exists: map the journey, settle every open question, name the domain language, and characterize what is already there before changing it. | 01 – 05 |
+| [`test-first`](./plugins/test-first) | Build against an acceptance test the agent may not edit, run the inner loop without pausing, and finish with evidence instead of a report of success, including a required section for what was not verified. | 05, 09, 12 |
+| [`parallel-agents`](./plugins/parallel-agents) | Run several agents at once without them corrupting each other: one git worktree per stream, explicit file allow-lists, branch CI as the merge gate, and a queue that stops rather than thrashing. | 09, 11 |
+| [`improve-agent`](./plugins/improve-agent) | Make an agent measurably better by changing only the text it reads. Measures the noise floor before it claims anything, changes one component per round, and keeps a change only when it clears the spread. | 11, 13 |
+| [`panel-review`](./plugins/panel-review) | A simulated panel of named practitioners reviews a design, a diff or a positioning draft, each from their own published positions, then the findings are verified against the code before any of them become tickets. | 06, 11 |
+| [`ship-what-you-can-prove`](./plugins/ship-what-you-can-prove) | Run the guide as a self-paced course inside this session: one chapter's exercise against your own repository, checked for the evidence it was supposed to leave, graded by an agent that cannot edit anything. | all 13 |
+
+The witness agent, which verifies work and has no tools that can write, ships with every plugin that
+dispatches it.
 
 **Then do the thing the files cannot do for you.** A rule here reads as a rule because somebody
 watched it get broken. You can copy the paragraph. You cannot copy the afternoon it cost, and a rule
@@ -35,21 +42,6 @@ find, and what it cost. That edit decides whether these files still exist in six
 The second edit is subtraction. Where one of these asks an agent to remember something your tooling
 could enforce, the enforcement wins. A check costs nothing per session and is obeyed absolutely;
 a paragraph costs context every time and is obeyed probabilistically.
-
-## What is here
-
-| Skill | What it does | Kind | Chapters |
-|---|---|---|---|
-| `refine` | Turn a vague ask into tickets a stranger could pick up cold: story map, example map, grill every open question, name the risks, slice vertically with a walking skeleton first. | Orchestrator — you start it by name | 02, 03 |
-| `specify-behavior` | Characterize what exists, turn examples into executable specs, name the domain language, then implement inside the spec. | Discipline | 01, 02, 04, 05 |
-| `autonomous-tdd` | The inner loop, run without pausing, against an outer test the agent may not edit. Three gears, four rules, refactor committed separately. | Discipline | 05 |
-| `verify-work` | Assemble the evidence that a change works, up a ladder from acceptance to traces, with a required section for what was not verified. | Discipline | 09, 12 |
-| `worktree-isolation` | One tree per stream, branched from the remote tip, closed by rebase and never by force; the shared stash stack. | Discipline | 09 |
-| `parallel-queue` | Several agents at once without collisions: worktree each, file allow-lists, branch CI as the gate, revert on red, stop after three failures. | Discipline | 09, 11 |
-| `improve-agent` | Make an agent measurably better by changing only the text it reads: an ownership line the loop may not cross, a frontier file, a noise floor measured before any claim, one component per round, and a witness for the verdict. | Orchestrator — `/improve-agent` | 11, 13 |
-| `guide` | The tutor: picks up where the reader left off, runs one chapter's exercise on their own repository, checks the evidence it was supposed to leave, and has the witness grade it. Keeps `.guide/progress.md`. | Orchestrator — `/guide` | all 13 |
-| `panel-review` | A simulated expert panel for design, code or positioning review. This course was reviewed with it. | Orchestrator — `/panel-review` | 06, 11 |
-| `agents/witness` | An agent that verifies and cannot edit: its tool list has no write tools, so its report cannot become "I fixed it". | Agent definition | 09 |
 
 ## Two rules the set is built on
 

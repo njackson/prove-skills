@@ -1,0 +1,9 @@
+{
+  "name": "parallel-agents",
+  "description": "Run several agents at once without them corrupting each other: one git worktree per stream, explicit file allow-lists, branch CI as the merge gate, and a queue that stops rather than thrashing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nate Jackson"
+  },
+  "homepage": "https://prove.natejackson.dev"
+}

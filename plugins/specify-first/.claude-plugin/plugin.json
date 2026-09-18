@@ -1,0 +1,9 @@
+{
+  "name": "specify-first",
+  "description": "Turn a vague ask into concrete examples and executable specs before any code exists: map the journey, settle every open question, name the domain language, and characterize what is already there before changing it.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nate Jackson"
+  },
+  "homepage": "https://prove.natejackson.dev"
+}

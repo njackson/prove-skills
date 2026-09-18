@@ -1,0 +1,9 @@
+{
+  "name": "improve-agent",
+  "description": "Make an agent measurably better by changing only the text it reads. Measures the noise floor before it claims anything, changes one component per round, and keeps a change only when it clears the spread.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nate Jackson"
+  },
+  "homepage": "https://prove.natejackson.dev"
+}

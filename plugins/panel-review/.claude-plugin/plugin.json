@@ -1,0 +1,9 @@
+{
+  "name": "panel-review",
+  "description": "A simulated panel of named practitioners reviews a design, a diff or a positioning draft, each from their own published positions, then the findings are verified against the code before any of them become tickets.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nate Jackson"
+  },
+  "homepage": "https://prove.natejackson.dev"
+}
